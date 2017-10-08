@@ -1,0 +1,104 @@
+{
+  "title": "Pipe like PC",
+  "rules": [
+    {
+      "description": "pipe",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "grave_accent_and_tilde",
+            "modifiers": {
+              "mandatory": [
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "7",
+              "modifiers": [
+                  "right_option"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "description": "backslash",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "hyphen",
+            "modifiers": {
+              "mandatory": [
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "7",
+              "modifiers": [
+                  "right_option", "shift"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "description": "curly-left",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "7",
+            "modifiers": {
+              "mandatory": [
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "8",
+              "modifiers": [
+                  "right_option", "shift"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "description": "curly-right",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "0",
+            "modifiers": {
+              "mandatory": [
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "9",
+              "modifiers": [
+                  "right_option", "shift"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
