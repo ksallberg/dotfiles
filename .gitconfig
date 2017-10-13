@@ -1,0 +1,29 @@
+[user]
+    name = Kristian Sallberg
+    email = krisallb@cisco.com
+[push]
+    default = simple
+[color]
+    ui = true
+[core]
+    pager = less -R
+    mergeoptions = --no-edit
+    editor = emacsclient
+[alias]
+    glog  = log --graph --abbrev-commit --pretty=oneline
+    logf  = log --name-status
+    lol   = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    lola  = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --all
+    uno   = status -uno --ignore-submodules
+    showtag = !sh -c 'git rev-parse $1 | xargs git cat-file -p' -
+[http]
+    sslVerify = true
+    sslCAInfo = /etc/ssl/certs/ca-certificates.crt
+[pull]
+    rebase = preserve
+[merge]
+    ff = false
+[diff]
+    difftool = meld
+[format]
+    pretty = fuller
