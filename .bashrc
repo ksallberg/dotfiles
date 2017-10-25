@@ -97,11 +97,16 @@ alias gb='git branch -v'
 alias 6.3='source ~/Documents/erlang/confd_basic/confdrc'
 export SOUNDCLOUD="not_defined"
 
-case $- in *i*)
-   [ -z "$TMUX" ] && exec tmux
-esac
-
-tmux source .tmux.conf
+# Do not open tmux if shell in emacs
+if [ -n "$EMACS" ];
+then
+    echo "emacs!";
+else
+    case $- in *i*)
+                   [ -z "$TMUX" ] && exec tmux
+    esac
+    tmux source ~/.tmux.conf;
+fi
 
 alias irssi='TERM=screen-256color irssi'
 
