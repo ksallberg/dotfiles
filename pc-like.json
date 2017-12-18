@@ -1,148 +1,171 @@
 {
-  "title": "Pipe like PC",
-  "rules": [
-    {
-      "description": "pipe",
-      "manipulators": [
+    "title": "Pipe like PC",
+    "rules": [
         {
-          "type": "basic",
-          "from": {
-            "key_code": "non_us_backslash",
-            "modifiers": {
-              "mandatory": [
-                "right_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "7",
-              "modifiers": [
-                  "right_option"
-              ]
-            }
-          ]
-        }
-      ]
-    },
+            "description": "pipe",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "non_us_backslash",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_option"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "7",
+                            "modifiers": [
+                                "right_option"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
 
-    {
-      "description": "tag",
-      "manipulators": [
         {
-          "type": "basic",
-          "from": {
-            "key_code": "non_us_backslash"
-          },
-          "to": [
-            {
-              "key_code": "grave_accent_and_tilde"
-            }
-          ]
-        }
-      ]
-    },
+            "description": "tag",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "non_us_backslash"
+                    },
+                    "to": [
+                        {
+                            "key_code": "grave_accent_and_tilde"
+                        }
+                    ]
+                }
+            ]
+        },
 
-    {
-      "description": "tag2",
-      "manipulators": [
         {
-          "type": "basic",
-          "from": {
-            "key_code": "non_us_backslash",
-            "modifiers": {
-              "mandatory": [
-                "shift"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "grave_accent_and_tilde",
-              "modifiers": [
-                  "shift"
-              ]
-            }
-          ]
-        }
-      ]
-    },
+            "description": "tag2",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "non_us_backslash",
+                        "modifiers": {
+                            "mandatory": [
+                                "shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "grave_accent_and_tilde",
+                            "modifiers": [
+                                "shift"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
 
-
-      
-    {
-      "description": "backslash",
-      "manipulators": [
         {
-          "type": "basic",
-          "from": {
-            "key_code": "hyphen",
-            "modifiers": {
-              "mandatory": [
-                "right_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "7",
-              "modifiers": [
-                  "right_option", "shift"
-              ]
-            }
-          ]
-        }
-      ]
-    },
+            "description": "backslash",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "hyphen",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_option"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "7",
+                            "modifiers": [
+                                "right_option", "shift"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
 
-    {
-      "description": "curly-left",
-      "manipulators": [
         {
-          "type": "basic",
-          "from": {
-            "key_code": "7",
-            "modifiers": {
-              "mandatory": [
-                "right_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "8",
-              "modifiers": [
-                  "right_option", "shift"
-              ]
-            }
-          ]
-        }
-      ]
-    },
+            "description": "curly-left",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "7",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_option"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "8",
+                            "modifiers": [
+                                "right_option", "shift"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
 
-    {
-      "description": "curly-right",
-      "manipulators": [
         {
-          "type": "basic",
-          "from": {
-            "key_code": "0",
-            "modifiers": {
-              "mandatory": [
-                "right_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "9",
-              "modifiers": [
-                  "right_option", "shift"
-              ]
-            }
-          ]
+            "description": "curly-right",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "0",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_option"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "9",
+                            "modifiers": [
+                                "right_option", "shift"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+
+        {
+            "description": "alt-tab",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "tab",
+                        "modifiers": {
+                            "mandatory": [
+                                "left_option"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "tab",
+                            "modifiers": [
+                                "left_command"
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
