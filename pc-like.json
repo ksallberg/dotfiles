@@ -1,6 +1,24 @@
 {
     "title": "Pipe like PC",
     "rules": [
+
+        {
+            "description": "capslock away",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "caps_lock"
+                    },
+                    "to": [
+                        {
+                            "key_code": "vk_none"
+                        }
+                    ]
+                }
+            ]
+        },
+
         {
             "description": "pipe",
             "manipulators": [
