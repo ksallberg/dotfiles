@@ -48,6 +48,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
+
 function d () {
     cd "$@" && ls
 }
@@ -60,7 +64,7 @@ then
     echo "emacs!";
 else
     case $- in *i*)
-                   [ -z "$TMUX" ] && exec tmux
+               [ -z "$TMUX" ] && exec tmux
     esac
     tmux source ~/.tmux.conf;
 fi

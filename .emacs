@@ -1,4 +1,6 @@
 (add-to-list 'load-path "/Users/kristian/.emacs.d/lisp")
+(add-to-list 'load-path "/Users/kristian/.emacs.d/elpa/haskell-mode-13.7/")
+(add-to-list 'Info-default-directory-list "/Users/kristian/.emacs.d/elpa/haskell-mode-13.7/")
 
 '(backup-directory-alist (quote (("." . "/Users/kristian/backup/emacs"))))
 
@@ -37,11 +39,10 @@
 (cua-mode t)
 (setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
 (transient-mark-mode 1) ;; No region when it is not highlighted
-(setq cua-keep-region-after-copy t) ;; Standard Windows behaviour
 
-(setq load-path (cons "/Users/kristian/Documents/otp/lib/tools/emacs" load-path))
-(setq erlang-root-dir "/Users/kristian/Documents/otp")
-(setq exec-path (cons "/usr/local/bin" exec-path))
+(setq load-path (cons "/Users/kristian/Documents/otp-18/lib/tools/emacs" load-path))
+(setq erlang-root-dir "/Users/kristian/Documents/otp-18")
+(setq exec-path (cons "/Users/kristian/Documents/otp-18/bin" exec-path))
 
 (require 'erlang-start)
 
@@ -141,6 +142,7 @@
  '(hl-paren-background-colors (quote ("#2492db" "#95a5a6" nil)))
  '(hl-paren-colors (quote ("#ffffff" "#ffffff" "#c0392b")))
  '(inhibit-startup-screen t)
+ '(package-selected-packages (quote (idris-mode magit haskell-mode edts)))
  '(send-mail-function (quote smtpmail-send-it))
  '(sml/active-background-color "#34495e")
  '(sml/active-foreground-color "#ffffff")
