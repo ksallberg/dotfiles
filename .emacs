@@ -1,6 +1,9 @@
 (add-to-list 'load-path "/Users/kristian/.emacs.d/lisp")
 (add-to-list 'load-path "/Users/kristian/.emacs.d/elpa/haskell-mode-13.7/")
-(add-to-list 'Info-default-directory-list "/Users/kristian/.emacs.d/elpa/haskell-mode-13.7/")
+
+(add-to-list 'load-path "/usr/local/Cellar/agda/2.5.3/share/emacs/site-lisp/agda")
+
+(require 'agda2-mode)
 
 '(backup-directory-alist (quote (("." . "/Users/kristian/backup/emacs"))))
 
@@ -24,7 +27,8 @@
 
 (setq-default show-trailing-whitespace t)
 
-(load-theme 'flatui t)
+;; (load-theme 'flatui t)
+(load-theme 'leuven t)
 
 (setq-default fill-column 80)
 
@@ -142,7 +146,7 @@
  '(hl-paren-background-colors (quote ("#2492db" "#95a5a6" nil)))
  '(hl-paren-colors (quote ("#ffffff" "#ffffff" "#c0392b")))
  '(inhibit-startup-screen t)
- '(package-selected-packages (quote (idris-mode magit haskell-mode edts)))
+ '(package-selected-packages (quote (leuven-theme idris-mode magit haskell-mode edts)))
  '(send-mail-function (quote smtpmail-send-it))
  '(sml/active-background-color "#34495e")
  '(sml/active-foreground-color "#ffffff")
@@ -184,3 +188,12 @@
       mac-right-option-modifier nil
       mac-command-modifier nil
       x-select-enable-clipboard t)
+
+(add-hook 'agda2-mode-hook
+          '(lambda ()
+            ; If you do not want to use any input method:
+            (deactivate-input-method)
+            ; (In some versions of Emacs you should use
+            ; inactivate-input-method instead of
+            ; deactivate-input-method.)
+            (set-input-method "X")))
