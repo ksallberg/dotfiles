@@ -69,6 +69,9 @@ else
     tmux source ~/.tmux.conf;
 fi
 
+export PATH="/usr/local/bin:$PATH"
+
 export PATH="/Users/kristian/Documents/lux/bin:$PATH"
 export PATH="/Users/kristian/Documents/otp-18/bin:$PATH"
+
 export ERL_TOP="/Users/kristian/Documents/otp-18"
