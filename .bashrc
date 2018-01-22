@@ -71,7 +71,7 @@ fi
 
 export PATH="/usr/local/bin:$PATH"
 
-export PATH="/Users/kristian/Documents/lux/bin:$PATH"
+export PATH="/Users/kristiansallberg/Documents/lux/bin:$PATH"
 export PATH="/Users/kristian/Documents/otp-18/bin:$PATH"
 
-export ERL_TOP="/Users/kristian/Documents/otp-18"
+export ERL_TOP="/usr/local/Cellar/erlang/20.2.2"

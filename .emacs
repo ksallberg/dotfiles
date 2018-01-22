@@ -1,18 +1,18 @@
-(add-to-list 'load-path "/Users/kristian/.emacs.d/lisp")
-(add-to-list 'load-path "/Users/kristian/.emacs.d/elpa/haskell-mode-13.7/")
-
-(add-to-list 'load-path "/usr/local/Cellar/agda/2.5.3/share/emacs/site-lisp/agda")
-
-(require 'agda2-mode)
+(add-to-list 'load-path "/Users/kristiansallberg/.emacs.d/lisp")
+(add-to-list 'load-path "/Users/kristiansallberg/.emacs.d/elpa/fill-column-indicator-20171209.1124")
+(add-to-list 'load-path "/Users/kristiansallberg/.emacs.d/elpa/prop-menu-20150728.418")
+(add-to-list 'load-path "/Users/kristiansallberg/.emacs.d/elpa/idris-mode-20171212.759")
+(add-to-list 'exec-path "/usr/local/bin")
 
 '(backup-directory-alist (quote (("." . "/Users/kristian/backup/emacs"))))
 
 (require 'whitespace)
 (require 'fill-column-indicator)
-(require 'lux-mode)
+                                        ; (require 'lux-mode)
+(require 'idris-mode)
 
-(autoload 'yang-mode "yang-mode" "Major mode for editing YANG modules." t)
-(add-to-list 'auto-mode-alist '("\\.yang$" . yang-mode))
+; (autoload 'yang-mode "yang-mode" "Major mode for editing YANG modules." t)
+; (add-to-list 'auto-mode-alist '("\\.yang$" . yang-mode))
 
 (setq whitespace-line-column 80) ;; limit line length
 (setq whitespace-style '(face lines-tail))
@@ -27,7 +27,6 @@
 
 (setq-default show-trailing-whitespace t)
 
-;; (load-theme 'flatui t)
 (load-theme 'leuven t)
 
 (setq-default fill-column 80)
@@ -38,15 +37,15 @@
         (propertize (number-to-string (1- line)) 'face 'linum)))
 
 (setq linum-format "%d ")
-;;(global-linum-mode 1)
+;; (global-linum-mode 1)
 
 (cua-mode t)
 (setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
 (transient-mark-mode 1) ;; No region when it is not highlighted
 
-(setq load-path (cons "/Users/kristian/Documents/otp-18/lib/tools/emacs" load-path))
-(setq erlang-root-dir "/Users/kristian/Documents/otp-18")
-(setq exec-path (cons "/Users/kristian/Documents/otp-18/bin" exec-path))
+(setq load-path (cons "/usr/local/Cellar/erlang/20.2.2/lib/erlang/lib/tools-2.11.1/emacs" load-path))
+(setq erlang-root-dir "/usr/local/Cellar/erlang/20.2.2")
+(setq exec-path (cons "/usr/local/Cellar/erlang/20.2.2/bin" exec-path))
 
 (require 'erlang-start)
 
@@ -58,10 +57,10 @@
 
 (add-hook 'after-init-hook 'my-after-init-hook)
 (defun my-after-init-hook ()
-   (require 'edts-start))
+  (require 'edts-start))
 
-(setq scroll-step            1
-      scroll-conservatively  10000)
+;; (setq scroll-step            1
+;;       scroll-conservatively  10000)
 
 (defun comment-or-uncomment-region-or-line ()
     "Comments or uncomments the region or the current line if there's no active region."
@@ -143,10 +142,15 @@
     ("3df646ca49db56cdb450803d9b392f44d0edf9af3ee4b0864fa7c6c83e7f7722" "efa1e7cc1555e35f9082120563770f35567e6455345f396b2f4c4a8c3ef4f0e1" "7b2be1fad5d49815db35d58db0f19f6db7e342c4f31e1c4e12129b8acbed7609" "e1971dd04efc89e418e18a354586730ef7d1d2bf660b66eef9bea59ec1171662" "f9aaa18f27c61afe1f0af672f78096457526d265507288927638745d63115d0c" "665f2e8645ce3a204a2508a49bed491d2377efe51f2154ab091a52543db2e50c" "98d666a5ec488c59a82564885f6fdced82725e6bf64fb515648c561c4ae36475" "da5b25ca67bea1f0d5a49bfc76fc788ad092f33a0afbeec8a0facd52bc1984ea" default)))
  '(fci-rule-color "#f1c40f")
  '(global-auto-revert-mode t)
+ '(haskell-mode-hook
+   (quote
+    (turn-on-haskell-indent turn-on-haskell-indentation turn-on-font-lock turn-on-eldoc-mode capitalized-words-mode)))
  '(hl-paren-background-colors (quote ("#2492db" "#95a5a6" nil)))
  '(hl-paren-colors (quote ("#ffffff" "#ffffff" "#c0392b")))
  '(inhibit-startup-screen t)
- '(package-selected-packages (quote (leuven-theme idris-mode magit haskell-mode edts)))
+ '(package-selected-packages
+   (quote
+    (markdown-mode erlang fill-column-indicator leuven-theme idris-mode magit haskell-mode edts)))
  '(send-mail-function (quote smtpmail-send-it))
  '(sml/active-background-color "#34495e")
  '(sml/active-foreground-color "#ffffff")
@@ -188,12 +192,3 @@
       mac-right-option-modifier nil
       mac-command-modifier nil
       x-select-enable-clipboard t)
-
-(add-hook 'agda2-mode-hook
-          '(lambda ()
-            ; If you do not want to use any input method:
-            (deactivate-input-method)
-            ; (In some versions of Emacs you should use
-            ; inactivate-input-method instead of
-            ; deactivate-input-method.)
-            (set-input-method "X")))
