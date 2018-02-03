@@ -184,7 +184,55 @@
                     ]
                 }
             ]
+        },
+
+        {
+            "description": "copy",
+            "type": "basic",
+            "from": {
+                "key_code": "c",
+                "modifiers": {
+                    "mandatory": [
+                        "left_option"
+                    ],
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "c",
+                    "modifiers": [
+                        "left_command"
+                    ]
+                }
+            ]
         }
+
+        // {
+        //     "description": "open tab",
+        //     "type": "basic",
+        //     "from": {
+        //         "key_code": "t",
+        //         "modifiers": {
+        //             "mandatory": [
+        //                 "left_option"
+        //             ],
+        //             "optional": [
+        //                 "any"
+        //             ]
+        //         }
+        //     },
+        //     "to": [
+        //         {
+        //             "key_code": "t",
+        //             "modifiers": [
+        //                 "left_command"
+        //             ]
+        //         }
+        //     ]
+        // }
 
 
     ]
