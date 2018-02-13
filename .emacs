@@ -1,14 +1,14 @@
 (add-to-list 'load-path "/Users/kristiansallberg/.emacs.d/lisp")
-(add-to-list 'load-path "/Users/kristiansallberg/.emacs.d/elpa/fill-column-indicator-20171209.1124")
 (add-to-list 'load-path "/Users/kristiansallberg/.emacs.d/elpa/prop-menu-20150728.418")
 (add-to-list 'load-path "/Users/kristiansallberg/.emacs.d/elpa/idris-mode-20171212.759")
+(add-to-list 'load-path "/Users/kristiansallberg/.emacs.d/elpa/fill-column-indicator-20171209.1124")
 (add-to-list 'exec-path "/usr/local/bin")
 
 '(backup-directory-alist (quote (("." . "/Users/kristian/backup/emacs"))))
 
 (require 'whitespace)
 (require 'fill-column-indicator)
-                                        ; (require 'lux-mode)
+(require 'lux-mode)
 (require 'idris-mode)
 
 ; (autoload 'yang-mode "yang-mode" "Major mode for editing YANG modules." t)
@@ -26,8 +26,6 @@
 (setq fci-rule-color "darkblue")
 
 (setq-default show-trailing-whitespace t)
-
-(load-theme 'leuven t)
 
 (setq-default fill-column 80)
 
@@ -139,7 +137,7 @@
    ["#ffffff" "#ffffff" "#2ecc71" "#f1c40f" "#2492db" "#9b59b6" "#1abc9c" "#2c3e50"])
  '(custom-safe-themes
    (quote
-    ("3df646ca49db56cdb450803d9b392f44d0edf9af3ee4b0864fa7c6c83e7f7722" "efa1e7cc1555e35f9082120563770f35567e6455345f396b2f4c4a8c3ef4f0e1" "7b2be1fad5d49815db35d58db0f19f6db7e342c4f31e1c4e12129b8acbed7609" "e1971dd04efc89e418e18a354586730ef7d1d2bf660b66eef9bea59ec1171662" "f9aaa18f27c61afe1f0af672f78096457526d265507288927638745d63115d0c" "665f2e8645ce3a204a2508a49bed491d2377efe51f2154ab091a52543db2e50c" "98d666a5ec488c59a82564885f6fdced82725e6bf64fb515648c561c4ae36475" "da5b25ca67bea1f0d5a49bfc76fc788ad092f33a0afbeec8a0facd52bc1984ea" default)))
+    ("ff7625ad8aa2615eae96d6b4469fcc7d3d20b2e1ebc63b761a349bebbb9d23cb" "3df646ca49db56cdb450803d9b392f44d0edf9af3ee4b0864fa7c6c83e7f7722" "efa1e7cc1555e35f9082120563770f35567e6455345f396b2f4c4a8c3ef4f0e1" "7b2be1fad5d49815db35d58db0f19f6db7e342c4f31e1c4e12129b8acbed7609" "e1971dd04efc89e418e18a354586730ef7d1d2bf660b66eef9bea59ec1171662" "f9aaa18f27c61afe1f0af672f78096457526d265507288927638745d63115d0c" "665f2e8645ce3a204a2508a49bed491d2377efe51f2154ab091a52543db2e50c" "98d666a5ec488c59a82564885f6fdced82725e6bf64fb515648c561c4ae36475" "da5b25ca67bea1f0d5a49bfc76fc788ad092f33a0afbeec8a0facd52bc1984ea" default)))
  '(fci-rule-color "#f1c40f")
  '(global-auto-revert-mode t)
  '(haskell-mode-hook
@@ -150,7 +148,7 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (markdown-mode erlang fill-column-indicator leuven-theme idris-mode magit haskell-mode edts)))
+    (dracula-theme markdown-mode erlang fill-column-indicator leuven-theme idris-mode magit haskell-mode edts)))
  '(send-mail-function (quote smtpmail-send-it))
  '(sml/active-background-color "#34495e")
  '(sml/active-foreground-color "#ffffff")
@@ -192,3 +190,14 @@
       mac-right-option-modifier nil
       mac-command-modifier nil
       x-select-enable-clipboard t)
+
+(load-theme 'dracula t)
+
+(defun toggle-fullscreen ()
+  "Toggle full screen"
+  (interactive)
+  (set-frame-parameter
+     nil 'fullscreen
+     (when (not (frame-parameter nil 'fullscreen)) 'fullheight)))
+
+(global-set-key (kbd "<f13>") 'toggle-fullscreen)
