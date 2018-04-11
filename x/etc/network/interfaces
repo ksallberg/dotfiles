@@ -1,0 +1,8 @@
+auto lo
+iface lo inet loopback
+
+auto eno1
+iface eno1 inet dhcp
+ hwaddress spoof:mac:something
+ wpa-driver wired
+ wpa-conf /etc/wpa_supplicant/wpa_supplicant-eno1.conf
