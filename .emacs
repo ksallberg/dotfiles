@@ -37,8 +37,8 @@
 (setq linum-format "%d ")
 ;; (global-linum-mode 1)
 
-(cua-mode t)
-(setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
+;; (cua-mode t)
+;; (setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
 (transient-mark-mode 1) ;; No region when it is not highlighted
 
 (setq load-path (cons "/usr/local/Cellar/erlang/20.2.2/lib/erlang/lib/tools-2.11.1/emacs" load-path))
