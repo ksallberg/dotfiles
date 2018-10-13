@@ -208,32 +208,73 @@
                     ]
                 }
             ]
+        },
+
+        {
+            "description": "lessthan greater than",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "quote"
+                    },
+                    "to": [
+                        {
+                            "key_code": "grave_accent_and_tilde"
+                        }
+                    ]
+                }
+            ]
+        },
+
+        {
+            "description": "taggg2",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "quote",
+                        "modifiers": {
+                            "mandatory": [
+                                "shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "grave_accent_and_tilde",
+                            "modifiers": [
+                                "shift"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+
+        {
+            "description": "baaar2",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "quote",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_option"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "7",
+                            "modifiers": [
+                                "right_option"
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
-
-        // {
-        //     "description": "open tab",
-        //     "type": "basic",
-        //     "from": {
-        //         "key_code": "t",
-        //         "modifiers": {
-        //             "mandatory": [
-        //                 "left_option"
-        //             ],
-        //             "optional": [
-        //                 "any"
-        //             ]
-        //         }
-        //     },
-        //     "to": [
-        //         {
-        //             "key_code": "t",
-        //             "modifiers": [
-        //                 "left_command"
-        //             ]
-        //         }
-        //     ]
-        // }
-
-
     ]
 }
